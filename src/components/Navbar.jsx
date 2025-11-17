@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
 <>
   <Header/>
-  <nav className='flex items-center justify-between px-6 md:px-10 lg:px-12 md:mt-2 font2'>
-    <div className="flex gap-7 md:gap-6 lg:gap-9">
+  <nav className='flex items-center justify-between px-6 md:px-10 lg:px-12 md:mt-2 font2  bg-white z-100 h-[8vh] sticky top-0'>
+    <div className="flex gap-4 md:gap-6 lg:gap-9">
       <NavLink to={'/'}>Home</NavLink>
       <NavLink to={'/projects'}>Projects</NavLink>
       <NavLink to={'/about'}>About</NavLink>
