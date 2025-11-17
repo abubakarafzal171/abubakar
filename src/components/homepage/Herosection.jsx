@@ -17,7 +17,7 @@ const Herosection = () => {
             <img
               src="profile_img.webp"
               alt="profile_img"
-              className="h-90 w-120 rounded shadow-md"
+              className="h-90 w-120 rounded-2xl shadow-md"
             />
           </div>
           <div className="right w-[90%] md:w-[25%]">
