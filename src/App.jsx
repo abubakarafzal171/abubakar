@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,23 +9,25 @@ import Footer from './components/Footer';
 
 const App = () => {
   const { pathname } = useLocation();
+  const [darkMode, setDarkMode] = useState(false);
 
-  // Scroll top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
-    <>
-      <Navbar />
+    <div className={`${darkMode ? 'bg-gray-950 text-white' : 'bg-white text-black'} min-h-screen flex flex-col justify-between`}>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/" element={<Home darkMode={darkMode} />} />
+        <Route path="/about" element={<About darkMode={darkMode} />} />
+        <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+        <Route path="/projects" element={<Projects darkMode={darkMode} />} />
       </Routes>
-      <Footer />
-    </>
+
+      <Footer darkMode={darkMode} />
+    </div>
   );
 };
 

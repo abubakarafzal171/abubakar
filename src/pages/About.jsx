@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <>
+    <div className={` h-full w-full    `}>
       {/* ABOUT SECTION */}
-      <section className="w-full bg-white py-10 font2">
+      <section className="w-full  py-10 font2">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4 font3">About Me</h2>
 
@@ -44,7 +44,7 @@ const About = () => {
       </section>
 
       {/* BANNER SECTION */}
-      <section className="w-full bg-white py-12 border-y font2">
+      <section className="w-full  py-12 border-y font2">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h3 className="text-2xl font-semibold font3">
             Let’s Build Something Great
@@ -56,7 +56,7 @@ const About = () => {
       </section>
 
       {/* SERVICES SECTION */}
-      <section className="w-full bg-white py-16 font2">
+      <section className="w-full  py-16 font2">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6 font3">Services</h2>
 
@@ -84,7 +84,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

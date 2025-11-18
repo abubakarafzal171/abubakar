@@ -16,12 +16,12 @@ const Servicessection = () => {
     {
       icon: <Package className="w-12 h-12" />,
       title: "Environmental Design",
-      desc: "I bring 2D ideas into 3D spaces — making design physical and tactile.",
+      desc: "I bring 2D ideas into 3D spaces  making design physical and tactile.",
     },
   ];
 
   return (
-    <section className="w-full bg-white py-24 px-6 md:px-12 lg:px-20 text-black">
+    <section className="w-full  py-15 px-6 md:px-12 lg:px-20">
       
       {/* Section Heading */}
       <h2 className="text-4xl md:text-5xl font-serif mb-20">
@@ -32,9 +32,9 @@ const Servicessection = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-14">
         {services.map((service, index) => (
           <div key={index} className="space-y-5">
-            <div className="text-black">{service.icon}</div>
+            <div className="">{service.icon}</div>
             <h3 className="text-2xl font-semibold font-serif">{service.title}</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               {service.desc}
             </p>
           </div>

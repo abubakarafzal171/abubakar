@@ -6,16 +6,16 @@ import Bannersection from "../components/homepage/Bannersection";
 import Servicessection from "../components/homepage/Servicessection";
 import Contactsection from "../components/homepage/Contactsection";
 
-const Home = () => {
+const Home = ({darkMode}) => {
   return (
-    <>
+    <div className={`${darkMode ? 'bg-gray-950 text-white' : 'bg-white text-black'}`}>
       <Herosection />
       <Aboutsection />
       <Projectsection />
       <Bannersection/>
       <Servicessection/>
       <Contactsection/>
-    </>
+    </div>
   );
 };
 

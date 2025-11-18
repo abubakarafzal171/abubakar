@@ -3,7 +3,7 @@ import { Mail, Phone, Facebook, Instagram, Github } from "lucide-react";
 
 const Contactsection = () => {
   return (
-    <div className="w-full px-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div className="w-full px-10 py-10 pb-2 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* Left Section */}
       <div className="flex flex-col gap-6">
         <p className="text-lg text-gray-600">Get in touch</p>
@@ -32,7 +32,7 @@ const Contactsection = () => {
         <img
           src="/profile_img.webp"
           alt="Profile"
-          className="w-94 h-94 object-cover rounded-2xl shadow-lg"
+          className="w-94 h-94  rounded-2xl shadow-lg"
         />
       </div>
     </div>
