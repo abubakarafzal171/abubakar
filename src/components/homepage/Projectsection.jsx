@@ -13,7 +13,7 @@ const Projectsection = () => {
         <WorkCard img={project2} title="Real Estate Website" link={'https://realestate-aa.netlify.app/'}/>
         <WorkCard img={project3} title="Ecommerce App" link={'https://ecommerce-app-virid-phi.vercel.app/'}/>
       </div>
-      <Link to={'/project'} className='border px-3 py-1.5  rounded hover:bg-[#1E1E1E] hover:text-white transition-all duration-300 font2'>Explore More</Link>
+      <Link to={'/projects'} className='border px-3 py-1.5  rounded hover:bg-[#1E1E1E] hover:text-white transition-all duration-300 font2'>Explore More</Link>
     </div>
   )
 }
