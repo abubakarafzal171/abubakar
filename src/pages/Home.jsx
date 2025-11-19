@@ -5,6 +5,7 @@ import Projectsection from "../components/homepage/Projectsection";
 import Bannersection from "../components/homepage/Bannersection";
 import Servicessection from "../components/homepage/Servicessection";
 import Contactsection from "../components/homepage/Contactsection";
+import Testimonialssection from "../components/homepage/Testmonialssection";
 
 const Home = ({darkMode}) => {
   return (
@@ -14,6 +15,7 @@ const Home = ({darkMode}) => {
       <Projectsection />
       <Bannersection/>
       <Servicessection/>
+      <Testimonialssection/>
       <Contactsection/>
     </div>
   );

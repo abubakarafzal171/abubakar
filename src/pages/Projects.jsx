@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import project1 from '../assets/images/project1.JPG';
 import project2 from '../assets/images/project2.JPG';
 import project3 from '../assets/images/project3.JPG';
@@ -15,21 +16,21 @@ const projectsData = [
   {
     title: 'Project No 2',
     description:
-      'This is a modern real estate web application designed to showcase property listings in a clean, intuitive, and user-friendly way. Built with a focus on simplicity and clarity, the site allows users to easily browse available properties, explore details, and get a feel for different listings.',
+      'This is a modern real estate web application designed to showcase property listings in a clean, intuitive, and user-friendly way. Users can easily browse available properties, explore details, and get a feel for different listings.',
     img: project2,
     link: 'https://realestate-aa.netlify.app/',
   },
   {
     title: 'Project No 3',
     description:
-      'This is a sleek and modern e-commerce web application designed to provide a smooth shopping experience. Built with contemporary frontend technologies, the site allows users to browse products, view product details, add items to the cart, and navigate through the store with ease.',
+      'A sleek and modern e-commerce web application providing a smooth shopping experience. Users can browse products, view details, add items to the cart, and navigate through the store easily.',
     img: project3,
     link: 'https://ecommerce-app-virid-phi.vercel.app/',
   },
   {
     title: 'Project No 4',
     description:
-      'The website includes well-structured sections such as About, Products, Services, and Contact, making it easy for visitors to learn about the brand and get in touch. Subtle animations and smooth transitions enhance the user experience, reflecting a polished and professional frontend implementation.',
+      'A polished website with sections like About, Products, Services, and Contact. Smooth transitions and subtle animations enhance the user experience and reflect a professional frontend implementation.',
     img: project4,
     link: 'https://www.urbanalfa.store/',
   },
@@ -39,15 +40,21 @@ const Projects = ({ darkMode }) => {
   return (
     <div
       className={`min-h-screen w-full px-4 py-10 md:px-10 ${
-        darkMode ? 'bg-linear-to-b from-gray-950 via-gray-950 to-gray-950 text-white' : 'bg-white text-black'
+        darkMode ? 'bg-gray-950 text-white' : 'bg-white text-black'
       }`}
     >
-      <h1 className="font-bold text-5xl font-sans mb-12 text-center md:text-left">Projects</h1>
+      <h1 className="font-bold text-5xl font-sans mb-12 text-center md:text-left">
+        Projects
+      </h1>
 
       <div className="flex flex-col gap-20">
         {projectsData.map((project, idx) => (
-          <div
+          <motion.div
             key={idx}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
             className={`flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 ${
               idx % 2 !== 0 ? 'md:flex-row-reverse' : ''
             }`}
@@ -55,16 +62,9 @@ const Projects = ({ darkMode }) => {
             {/* Left Content */}
             <div className="flex-1">
               <h2 className="font-bold text-3xl font-serif mb-4">{project.title}</h2>
-              <p className={`text-justify ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>{project.description}</p>
-            </div>
-
-            {/* Right Image */}
-            <div className="flex-1 flex flex-col items-center gap-4">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full max-w-md rounded-lg shadow-lg object-cover"
-              />
+              <p className={`text-justify mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 target="_blank"
@@ -73,7 +73,18 @@ const Projects = ({ darkMode }) => {
                 View Project
               </a>
             </div>
-          </div>
+
+            {/* Right Image */}
+            <div className="flex-1 flex flex-col items-center gap-4">
+              <motion.img
+                src={project.img}
+                alt={project.title}
+                className="w-full max-w-md rounded-lg shadow-lg object-cover"
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: 'spring', stiffness: 120 }}
+              />
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>
