@@ -43,7 +43,7 @@ const Testimonialssection = () => {
         </motion.h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {testimonials.map((item, i) => (
             <motion.div
               key={i}  // 🔥 key trick = always re-render → repeat animation
@@ -55,7 +55,7 @@ const Testimonialssection = () => {
               }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               viewport={{ once: false, amount: 0.3 }} // 🔥 ensures re-trigger
-              className="p-6 rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 bg-white/5 backdrop-blur-md"
+              className="p-6 rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 bg-white/5 backdrop-blur-md "
             >
               <p className="italic mb-4">“{item.message}”</p>
               <h3 className="font-semibold text-lg">{item.name}</h3>

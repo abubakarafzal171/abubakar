@@ -8,7 +8,7 @@ const Bannersection = () => {
 
         {/* Heading */}
         <motion.h3
-          className="text-2xl font-semibold font3 bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent inline-block"
+          className="text-3xl font-bold font3 bg-linear-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent inline-block"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

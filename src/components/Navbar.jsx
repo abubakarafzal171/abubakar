@@ -9,7 +9,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <Header darkMode={darkMode}/>
 
       <nav className={`flex items-center justify-between px-6 md:px-10 lg:px-12 md:mt-2 font2  z-100 h-[8vh] sticky top-0 ${darkMode ? 'bg-gray-950 text-white': 'bg-white shadow-md'}`}>
-        <div className="flex gap-4 md:gap-6 lg:gap-9 text-xs md:text-normal">
+        <div className="flex gap-4 md:gap-6 lg:gap-9 text-xs md:text-lg">
           <NavLink to={'/'}>Home</NavLink>
           <NavLink to={'/projects'}>Projects</NavLink>
           <NavLink to={'/about'}>About</NavLink>

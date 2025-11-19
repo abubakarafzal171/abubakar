@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo / Name */}
         <div>
           <h2 className="text-2xl font-bold">Abubakar Afzal</h2>
-          <p className="text-gray-400 mt-2">Frontend Web Develope</p>
+          <p className="text-gray-400 mt-2">Frontend Web Developer</p>
         </div>
 
         {/* Navigation Links */}

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Herosection = () => {
   return (
     <motion.div
-      className="flex justify-center items-center flex-col px-4 md:py-10 pt-10"
+      className=" w-[90%] md:w-full flex justify-center items-center flex-col px-4 md:py-10 pt-10 mx-auto"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
